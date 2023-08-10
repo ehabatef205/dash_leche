@@ -14,6 +14,8 @@ import DashpageSlider from "./pages/SliderDash";
 import DashpageImage from "./pages/ImagesDash";
 import EditImage from "./pages/EditImage";
 import DashpageUsers from "./pages/UserDash";
+import DashFeaturedBrands from "./pages/FeaturedBrandsDash";
+import CreateFeaturedBrands from "./pages/CreateFeaturedBrands";
 
 function App() {
   return (
@@ -30,10 +32,12 @@ function App() {
         <Route path="/dash/slider/create" element={<CreateSliderImage />} />
         <Route path="/dash/slider/edit/:id" element={<EditSliderImage />} />
         <Route path="/dash/image" element={<DashpageImage />} />
-        {<Route path="/dash/image/edit/:id" element={<EditImage />} />}
+        <Route path="/dash/image/edit/:id" element={<EditImage />} />
         <Route path="/vieworder/" element={<ViewOrder />} />
         <Route path="/dash/create/product" element={<Createproduct />} />
         <Route path="/dash/users" element={<DashpageUsers />} />
+        <Route path="/dash/featured_brands" element={<DashFeaturedBrands />} />
+        <Route path="/dash/featured_brands/create" element={<CreateFeaturedBrands />} />
       </Routes>
     </div>
   );

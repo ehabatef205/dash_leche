@@ -51,6 +51,9 @@ export default function ViewOrder() {
                     {order.products.map((product, key) => (
                       <Orderitems details={product}></Orderitems>
                     ))}
+
+                    <div className="my-3 mx-3">{"الحالة  :    " + order.status}</div>
+
                     <div className="my-3 mx-3">{"المجموع الكلي :    " + order.totalPrice + " $"}</div>
 
                     <div className="my-3 mx-3">{"الدفع  :    " + order.payment}</div>

@@ -16,6 +16,7 @@ export function SideDash() {
             <button style={linkstyle} onClick={() => navigate("/dash/orders")}> الطلبات  </button>
             <button style={linkstyle} onClick={() => navigate("/dash/image")}> الصور  </button>
             <button style={linkstyle} onClick={() => navigate("/dash/slider")}> Slider images  </button>
+            <button style={linkstyle} onClick={() => navigate("/dash/featured_brands")}> Featured Brands image </button>
         </div>
     )
 }

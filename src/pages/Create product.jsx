@@ -40,6 +40,16 @@ export default function Createproduct() {
     });
   };
 
+  const handleKeyPress = (event) => {
+    if (event.key === 'Enter') {
+      event.preventDefault(); // Prevent form submission
+      setFormData({
+        ...formData,
+        desc: formData.desc + '\n',
+      })// Add a new line to the input value
+    }
+  };
+
   return (
     <div style={{ direction: "rtl" }}>
       <div style={{ display: "flex", flexDirection: "row" }}>
@@ -92,10 +102,12 @@ export default function Createproduct() {
                           <label className="my-3 mx-3" style={{ width: "15%" }}>
                             الوصف
                           </label>
-                          <input
+                          <textarea
                             className="my-3 mx-3"
                             style={{ flex: "0 %25", width: "80%" }}
                             value={formData?.desc}
+                            onKeyPress={handleKeyPress}
+                            rows={10}
                             onChange={(e) =>
                               setFormData({
                                 ...formData,
